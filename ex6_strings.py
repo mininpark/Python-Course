@@ -21,5 +21,5 @@ print (joke_evaluation % hilarious)
 
 w = "This is the left side of ..."
 e = "a string with a right side."
-# why? 
+# why? adding two of them into one sentence? for putting a variable in it
 print (w + e)
