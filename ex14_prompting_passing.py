@@ -15,7 +15,7 @@ print ("What kind of computer do you have?")
 computer = input(prompt)
 
 print ("""
-18 Alright, so you said %r about liking me.
-1You live in %r. Not sure where that is.
-2And you have a %r computer. Nice.
-2""" % (likes, lives, computer))
+Alright, so you said %r about liking me.
+You live in %r. Not sure where that is.
+And you have a %r computer. Nice.
+""" % (likes, lives, computer))
