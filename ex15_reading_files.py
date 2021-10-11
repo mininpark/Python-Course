@@ -9,6 +9,7 @@ print("Here's your file %r:" % filename)
 print(txt.read())
 
 print("Type the filename again:")
+# what is the meaning of "> "
 file_again = input("> ")
 
 txt_again = open(file_again)
