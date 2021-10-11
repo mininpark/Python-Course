@@ -1,8 +1,8 @@
 # import the arguments from system, that it's already given
 from sys import argv
-# two arguments
+# two arguments (filename has based on actual file name
 script, filename = argv
-# new command OPEN filename.txt form
+# txt is the name of function to open the file
 txt = open(filename)
 
 print("Here's your file %r:" % filename)
