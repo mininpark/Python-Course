@@ -22,8 +22,9 @@ print("This should be five: %s" % five)
 # started is a local (temporary) variable. It's not necessary to have
 def secret_formula(x):
     jelly_beans = x * 500
-    jars = jelly_beans / 1000
-    crates = jars / 100
+    # int is for integer()
+    jars = int(jelly_beans / 1000)
+    crates = int(jars / 100)
     return jelly_beans, jars, crates
 
 
@@ -32,8 +33,9 @@ beans, jars, crates = secret_formula(start_point)
 
 print("With a starting point of: %d" % start_point)
 print("We'd have %d beans, %d jars, and %d crates." % (beans, jars, crates))
+print("We have {} beans, {} jars, and {} crates.".format(beans, jars, crates))
 
-start_point = start_point / 10
+new_start_point = start_point / 10
 
 print("We can also do that this way:")
-print("We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point))
+print("We'd have %d beans, %d jars, and %d crates." % secret_formula(new_start_point))
