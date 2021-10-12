@@ -8,7 +8,11 @@ print("Copying from %s to %s" % (from_file, to_file))
 
 # we could do these two on one line too, how?
 in_file = open(from_file)
+# put the opject in data
 indata = in_file.read()
+# One line:
+# indata = open(from_file).read()
+
 
 # LENGTH OF INPUT FILE DATA
 print("The input file is %d bytes long" % len(indata))
