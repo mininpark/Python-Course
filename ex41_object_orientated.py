@@ -3,7 +3,7 @@
 # class X(object): def M(self, J): class X has-a function named M that takes self and J parameters
 
 import random
-from urllib import urlopen
+from urllib.parse import urlencode, quote_plus
 import sys
 WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
