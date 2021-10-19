@@ -1,7 +1,11 @@
 # Animal is-a object
 
 class Animal(object):
-    pass
+
+    def __init__(self, name):
+        self.name = name
+    def run(self):
+        print("We run.")
 
 
 class Dog(Animal):
@@ -45,6 +49,7 @@ class Halibut(Fish):
 ## rover is-a Dog
 rover = Dog("Rover")
 
+rover.run()
 
 ##
 satan = Cat("Satan")
