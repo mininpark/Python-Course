@@ -34,6 +34,7 @@ class Engine:
             next_scene_name = current_scene.enter()
             current_scene = self.scene_map.next_scene(next_scene_name)
 
+
 class Death(Scene):
 
     quips = [
@@ -354,5 +355,5 @@ class Monster(Human):
 
 a_map = Map('central_corridor')
 a_hero = Hero('mina')
-a_game = Engine(a_map, a_hero)
+a_game = Engine(a_map)
 a_game.play()
