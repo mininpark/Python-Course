@@ -1,32 +1,56 @@
-nameOfStock = []
-
-nameOfStock = input("which name of stock you want to buy? ")
-
-
-print(nameOfStock)
-
+import inspect
 class Portfolio:
-    cash = []
-    def __init__(self, cash=None, stock=None, mutualFunds=None):
-        self.cash = cash
-        self.stock = stock
-        self.mutualFunds = mutualFunds
+    def __init__(self):
+        self.cash = 0
+        # dictonary for invest gruops
+        self.invests = {"stock": {}, "mutual funds": {}, "bonds": {}}
         
-    def addCash(money):
-        cash = input("How much money you want to put? ")
-        money = float(cash) + float(money)
 
-Portfolio.addCash()
-print()
+    def addCash(self, cash):
+        self.cash += int(cash * 100) / 100.0 
 
-class Stock(Portfolio):
-    def __init__(self, price=None, name=None):
+
+    def withdrawCash(self, cash):
+        if self.cash < cash:
+            print("You don't have enough cash for buying. Please charge more")
+        else:
+            self.cash -= int(100 * cash) / 100.0
+
+
+    def buyStock(self, amount, invest):
+        self.buyInvest(int(amount), invest)
+
+
+    def buyInvest(self, amount, invest):
+        if self.cash < amount * invest.price:
+            print("You don't have enough cash for buying. Please charge more")
+            return None
+        self.withdrawCash(amount * invest.price)
+
+        if invest in self.invests:
+            # how to check if 
+            inspect.isclass(invest) += amount
+        else:
+            inspect.isclass(invest) = amount
+
+    def buyStock(self, amount, invest):
+        self.buyInvest(int(amount), invest)
+
+    def buyMutualFund(self, amount, invest):
+        self.buyInvest(int(amount), invest)
+
+    def buyBonds(self, amount, invest):
+        self.buyInvest(int(amount), invest)
+
+
+class Invest(object):
+    def __init__(self, price, name):
         self.price = price
         self.name = name
-
-    def buyStock(self, amount, symbol):
-        self.amount = amount
-        self.symbol = symbol
+class Stock(Invest):
+    def __init__(self, price, name):
+        self.price = price
+        self.name = name
 
 
 s = Stock(20, "HFH")
