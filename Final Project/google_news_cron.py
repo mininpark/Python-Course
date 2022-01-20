@@ -9,7 +9,7 @@ import google_news_dbmanager
 
 class GoogleNewsCron():
     def __init__(self):
-        print ('크론 시작')
+        print ('Cron Start')
         self.scheduler = BackgroundScheduler(job_defaults={'max_instances': 10, 'coalesce': False})
         self.scheduler.start()
         self.dbManager = google_news_dbmanager.GoogleNewsDBManager()
@@ -34,12 +34,12 @@ class GoogleNewsCron():
                     data['source'] = data.source.title
                     self.dbManager.queryInsertGoogleNewsTable(data)
             else:
-                print ('Google 검색 에러')
+                print ('Google Search Error')
         except requests.exceptions.RequestException as err:
             print ('Error Requests: {}'.format(err))
     
     def run(self, mode, country, keyword):
-        print ("실행!")
+        print ("execuse!")
         self.dbManager.queryCreateGoogleNewsTable(keyword)
         self.dbManager.queryCreateKeywordTable()
         self.dbManager.queryInsertKeywordTable({

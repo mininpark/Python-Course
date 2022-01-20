@@ -17,5 +17,9 @@ def main():
     except KeyboardInterrupt:
         gooleNewsCron.stop()
 
+    #print (parser)
+
+
+
 if __name__=="__main__":
     main()

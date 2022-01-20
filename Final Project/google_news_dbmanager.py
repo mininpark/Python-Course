@@ -2,7 +2,7 @@ import sqlite3
 
 class GoogleNewsDBManager:
     def __init__(self):
-        print ("DB Manager 시작")
+        print ("DB Manager Start")
         self.DBName = 'google_news.db'
         self.db = sqlite3.connect(self.DBName, check_same_thread=False)
         self.db.row_factory = sqlite3.Row
